@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+
+<head>
+	<title>Films</title>
+
+	<meta charset="UTF-8"/>
+
+	<link rel="stylesheet" type="text/css" href="style/style.css"/>
+
+	<!-- pour utiliser le fichier de données fournis -->
+	<script src="data/film.js"></script>
+
+	<script src="scripts/script.js"></script>
+
+
+</head>
+
+<body>
+
+<h1>Choisissez vos films</h1>
+
+
+<div id="selection" class="block">
+	<h3>Mon top 2</h3>
+	<div id="select1"><span>1</span></div>
+	<div id="select2"><span>2</span></div>
+</div>
+
+<div class="block" id="catalog">
+	<input type="text" placeholder="filtrer les films" id="filter"/>
+	details ? <input type="checkbox" id="showDetails" checked="checked"/>
+
+	<div id="films"></div>
+
+	<div id="details"></div>
+</div>
+
+
+</body></html>

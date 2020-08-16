@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Challenge JS</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="text-center bg-primary text-white pb-1">
+            <h1>Challenge 1 JAVASCRIPT</h1>
+        </div>
+        <div class="container">
+            <p>Un enfant joue avec une balle au nième étage d’un grand immeuble. La hauteur de cet étage, h, est connue.
+            <br>Il laisse tomber la balle par dessus le balcon. La balle rebondit (par exemple) aux deux tiers de sa hauteur (un rebond de 0,66).
+            Sa mère regarde droit devant par une fenêtre à 1,5 mètre du sol.
+            <br><br><strong>Combien de fois la mère verra-t-elle passer le ballon devant sa fenêtre (y compris lorsqu'il tombera et rebondirait?)
+                <br>Editez le fichier script.js pour faire retourner à la fonction présente ce nombre.
+            </strong>
+            <br><br>Trois conditions doivent être remplies pour qu'une expérience soit valide:
+            <br><strong>Condition 1 :</strong> Le paramètre "h" en mètres doit être supérieur à 0
+            <br><strong>Condition 2 :</strong>Le paramètre "rebond" doit être supérieur à 0 et inférieur à 1
+            <br><strong>Condition 3 :</strong>Le paramètre "fenetre" doit être inférieur à h.
+            <br>Si les trois conditions ci-dessus sont remplies, retourne un entier positif, sinon renvoie -1.
+            <br>Remarque: La balle ne peut être vue que si la hauteur qu'atteint la balle quand elle rebondit est strictement supérieure au paramètre window.
+            <br><br>
+            Exemple:
+            <br>
+            <br>h = 3, rebond = 0,66, fenêtre = 1,5, le résultat est 3 (1 fois lors du laché puis au premier rebond la balle monte à 1m98 et redescend
+            (vue à la montée et à la redescente) puis au troisieme rebond la balle monte à 1m30 donc ne peut être vue)
+            <br>h = 3, rebond = 1, fenêtre = 1,5, le résultat est -1 (condition 2) non remplie).</p>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary btn-lg" id="test">Lancer les tests</button>
+            </div>
+
+            <div id="result">
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="tests.js"></script>
+    </body>
+</html>

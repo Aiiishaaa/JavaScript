@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Challenge JS</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="text-center bg-primary text-white pb-1">
+            <h1>Challenge 2 JAVASCRIPT</h1>
+        </div>
+        <div class="container">
+            <p>On va jouer au poker et chercher si on a une main flush.
+            <br><strong>Déterminez si la main de poker qui vous est donnée en argument est flush, c'est-à-dire si les cinq cartes sont de la même couleur.</strong>
+            Votre fonction recevra une liste / un tableau de 5 chaînes, chacune représentant une carte de poker au format
+            "5H" (5 de coeurs (heart en anglais)), c'est-à-dire la valeur de la carte suivie de l'initiale de sa couleur :
+            <br>(Coeurs, Pique, Carreau ou Trefle)
+            <br>(Hearts, Spades, Diamonds ou Clubs) anglais
+            <br> donc ici ( H , S , D ou C)
+
+            <br><strong>Votre fonction devrait retourner true si la main est une couleur, false sinon.</strong>
+
+            <br>Les valeurs de carte possibles sont 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A
+
+            <br>Exemples
+            <br>["AS", "3S", "9S", "KS", "4S"] ==> true car toutes sont du pique (spades : S)
+
+            <br>["AD", "4S", "7H", "KS", "10S"] ==> false
+            </p>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary btn-lg" id="test">Lancer les tests</button>
+            </div>
+
+            <div id="result">
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="tests.js"></script>
+    </body>
+</html>
