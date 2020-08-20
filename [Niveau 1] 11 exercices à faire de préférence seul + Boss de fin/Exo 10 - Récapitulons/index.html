@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>Exo 10 JS</title>
-        
-    </head>
-    <body>
-        <h1>Exercice 10 : Récapitulons</h1>
-        <p>Le jeu du plus ou moins</p>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exo 10 JS</title>
+
+</head>
+
+<body>
+    <h1>Exercice 10 : Récapitulons</h1>
+    <h2>Le jeu du plus ou moins</h2>
+
+    <script>
+        var nombresaisie;
+        var i = 0;
+        var nombrealeatoire = Math.floor(Math.random() * 101);
+
+        while (nombrealeatoire != nombresaisie) {
+            i++;
+            nombresaisie = prompt(" SAISISSEZ VOTRE ESTIMATION  ");
+
+            if (nombresaisie == nombrealeatoire) {
+                alert("Bien joué ! Nombre d'essai = " + i);
+            } else if (nombrealeatoire < nombresaisie) {
+                alert("Le Nombre Aléatoire est inférieure au nombre saisie.");
+                alert(" Nombre d'essai = " + i);
+            } else {
+                alert("Le Nombre Aléatoire est supérieure au nombre saisie.");
+                alert(" Nombre d'essai = " + i);
+            }
+        }
+    </script>
+</body>
+
 </html>

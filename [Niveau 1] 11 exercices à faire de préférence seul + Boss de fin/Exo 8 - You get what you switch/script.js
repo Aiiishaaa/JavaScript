@@ -1,6 +1,6 @@
 var alimentSaisie = prompt(' Taper le nom du produit ');
 a = alimentSaisie.toLowerCase();
-switch (alimentSaisie) {
+switch (a) {
     case "tomate":
         console.log("Tomate: Bon pour la santé et vegan");
         break;

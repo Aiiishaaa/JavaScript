@@ -1,26 +1,32 @@
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Mon titre</title>
-<script type="text/javascript" src="lib.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Mon titre</title>
+    <script type="text/javascript" src="lib.js"></script>
 </head>
+
 <body>
-<h1 onClick="showHxContent(1)">Partie 1</h1>
-<div id="title1" style="display:none">
-<p>Mon premier paragraphe</p>
-<p>Mon second paragraphe</p>
-</div>
-<h1 onClick="showHxContent(2)">Partie 2</h1>
-<div id="title2" style="display:none">
-<p>Mon premier paragraphe</p>
-<p>Mon second paragraphe</p>
-</div>
-<p>
-<input type="submit" value="Masquer" onClick="hideAllDivs()"/>
-</p>
-<p>
-Titre n°: <input type="text" id="title"/>
-<input type="submit" value="Afficher" onClick="alertTitle()"/>
-</p>
+    <h1 id="a" onClick="showHxContent(1)">Partie 1</h1>
+    <div id="title1" style="display:none">
+        <p>Mon premier paragraphe</p>
+        <p>Mon second paragraphe</p>
+    </div>
+
+    <h1 id="a" onClick="showHxContent(2)">Partie 2</h1>
+    <div id="title2" style="display:none">
+        <p>Mon premier paragraphe</p>
+        <p>Mon second paragraphe</p>
+    </div>
+    <p> <input type="submit" value="Masquer" onClick="hideAllDivs()" /> </p>
+
+    <p>
+        Titre n°: <input type="text" id="title" />
+        <input type="submit" value="Afficher" onClick="alertTitle()" />
+        <input type="submit" value="Supprimer " onClick="deleteTitle()" />
+        <input type="submit" value="Ajouter " onClick="defineTitle()" />
+    </p>
+
 </body>
+
 </html>
