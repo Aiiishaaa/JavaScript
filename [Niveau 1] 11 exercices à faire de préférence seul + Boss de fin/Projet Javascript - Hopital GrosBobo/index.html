@@ -8,65 +8,54 @@
 </head>
 
 <body>
+    <div class="content">
 
-    <h2> Le Corps Humain </h2>
+        <h1>Le Corps Humain</h1>
+        <div class="page">
+            <div class="partie-gauche">
+                <img alt="corps humain" src="corps.png" />
+                <bouton id="epaule" class="btn" onClick="showContent(1)"></bouton>
+                <bouton id="poignet" class="btn" onClick="showContent(2)"></bouton>
+                <bouton id="coude" class="btn" onClick="showContent(3)"></bouton>
+                <bouton id="hanche" class="btn" onClick="showContent(4)"></bouton>
+                <bouton id="genou" class="btn" onClick="showContent(5)"></bouton>
+                <bouton id="cheville" class="btn" onClick="showContent(6)"></bouton>
 
+            </div>
+            <div class="partie-droite">
+                <p id="title1" style="display:none">
+                    <span> L'épaule </span> (nom féminin) est la région morphologique se situant à la jonction du tronc avec le membre supérieur. Elle comporte plusieurs articulations qui concourent à en faire le complexe articulaire le plus mobile du
+                    corps humain. Elle permet d'orienter le membre supérieur dans l'espace, autorisant en particulier son extrémité effectrice, la main, à assurer ses rôles de préhension et de communication avec l'environnement situé à sa portée.
+                </p>
 
-    <img alt="corps humain" src="corps.png" />
+                <p id="title2" style="display:none">
+                    <span> Le poignet </span> est une région du membre supérieur située entre la main et l'avant-bras, et contenant le carpe. Élément-clé pour le fonctionnement de la main, il permet les mouvements (c'est-à-dire les changements de place
+                    et d’orientation) de la main par rapport à l’avant-bras, transmet les forces appliquées de la main à l’avant-bras, permet d'adapter la capacité de flexion-extension maximale des doigts et de la préhension.
+                </p>
 
+                <p id="title3" style="display:none">
+                    <span> Le coude </span> (ou articulation olécranienne) est la partie du membre supérieur située entre le bras et l'avant-bras. Cette articulation comprend en avant la région du « pli du coude » (ou fosse cubitale). C'est un complexe
+                    articulaire synovial du membre supérieur humain reliant le bras à l'avant-bras. Il unit ainsi trois os entre eux : le radius, l'ulna (cubitus) et l'humérus.
+                </p>
 
-    <button id="btn" type="button1">
-    <h1 class="epaule" onClick="showHxContent(1)"> L'épaule </h1>
-    <div id="title1" style="display:none">
-        <p>L'épaule (nom féminin) est la région morphologique se situant à la jonction du tronc avec le membre supérieur.</p>
-        <p>Elle comporte plusieurs articulations qui concourent à en faire le complexe articulaire le plus mobile du corps humain. </p>
-        <p>Elle permet d'orienter le membre supérieur dans l'espace, autorisant en particulier son extrémité effectrice, la main, à assurer ses rôles de préhension et de communication avec l'environnement situé à sa portée.</p>
+                <p id="title4" style="display:none">
+                    <span> La hanche</span> ou articulation coxo-fémorale est une articulation (sphéroïde) qui permet de joindre la cuisse au bassin. Elle met en jeu deux os : l'os coxal et le fémur.
+                </p>
+
+                <p id="title5" style="display:none">
+                    <span> Le genou </span>est une articulation qui permet de joindre la jambe à la cuisse. Elle met en jeu trois os, le fémur, le tibia et la patella, par le biais de trois articulations, l'articulation fémoro-patellaire et la double
+                    articulation fémoro-tibiale.
+                </p>
+
+                <p id="title6" style="display:none">
+                    <span> La cheville</span> ou cou-de-pied est l'articulation qui relie la jambe et le pied. Elle est parfois sujette à des entorses, le plus souvent externes par flexion plantaire et pied en équin. Une cheville adulte est composée,
+                    au point de vue osseux, de l'épiphyse inférieure du tibia (malléole interne et plafond), de l'épiphyse inférieure de la fibula (ou péroné) (malléole externe) et du talus (ou astragale). Classiquement, on parle d'articulation supinale
+                    de l'arrière pied. </p>
+                </p>
+
+            </div>
+        </div>
     </div>
-</button>
-
-    <button id="btn" type="button2">
-    <h1 class="poignet" onClick="showHxContent(2)"> Le Poignet </h1>
-    <div id="title2" style="display:none">
-        <p> Le poignet est une région du membre supérieur située entre la main et l'avant-bras, et contenant le carpe.</p>
-        <p> Élément-clé pour le fonctionnement de la main, il permet les mouvements (c'est-à-dire les changements de place et d’orientation) de la main par rapport à l’avant-bras, transmet les forces appliquées de la main à l’avant-bras, permet d'adapter
-            la capacité de flexion-extension maximale des doigts et de la préhension</p>
-    </div>
-</button>
-
-    <button id="btn" type="button3">
-    <h1  id="btn" class="coude" onClick="showHxContent(3)"> Le coude</h1>
-    <div id="title3" style="display:none">
-        <p> Le coude (ou articulation olécranienne) est la partie du membre supérieur située entre le bras et l'avant-bras. Cette articulation comprend en avant la région du « pli du coude » (ou fosse cubitale). C'est un complexe articulaire synovial du membre
-            supérieur humain reliant le bras à l'avant-bras. Il unit ainsi trois os entre eux : le radius, l'ulna (cubitus) et l'humérus.</p>
-    </div>
-</button>
-
-    <button id="btn" type="button4">
-    <h1 class="hanche" onClick="showHxContent(4)"> La hanche </h1>
-    <div id="title4" style="display:none">
-
-        <p>La hanche ou articulation coxo-fémorale est une articulation (sphéroïde) qui permet de joindre la cuisse au bassin.</p>
-        <p> Elle met en jeu deux os : l'os coxal et le fémur.</p>
-    </div>
-    </button>
-
-
-    <button id="btn" type="button5">
-    <h1 class="genou" onClick="showHxContent(5)"> La genou </h1>
-    <div id="title5" style="display:none">
-        <p> Le genou est une articulation qui permet de joindre la jambe à la cuisse. Elle met en jeu trois os, le fémur, le tibia et la patella, par le biais de trois articulations, l'articulation fémoro-patellaire et la double articulation fémoro-tibiale.
-        </p>
-    </div>
-</button>
-    <button id="btn" type="button6">
-    <h1 class="cheville" onClick="showHxContent(6)"> La cheville </h1>
-    <div id="title6" style="display:none">
-
-        <p> La cheville ou cou-de-pied est l'articulation qui relie la jambe et le pied. Elle est parfois sujette à des entorses, le plus souvent externes par flexion plantaire et pied en équin.</p>
-        <p>Une cheville adulte est composée, au point de vue osseux, de l'épiphyse inférieure du tibia (malléole interne et plafond), de l'épiphyse inférieure de la fibula (ou péroné) (malléole externe) et du talus (ou astragale).</p>
-        <p> Classiquement, on parle d'articulation supinale de l'arrière pied. </p>
-    </div>
-</button>
 </body>
 
 </html>
