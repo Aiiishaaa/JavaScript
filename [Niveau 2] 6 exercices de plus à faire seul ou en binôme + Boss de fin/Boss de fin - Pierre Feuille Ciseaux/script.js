@@ -3,10 +3,10 @@ const pierre = document.querySelector('#pierre'),
     ciseaux = document.querySelector('#ciseaux'),
 
     result = document.querySelector("#result"),
-    partie = document.querySelector("#partie");
+    partie = document.querySelector("#partie"),
 
 
-const Tab = [feuille, pierre, ciseaux];
+    Tab = [pierre, feuille, ciseaux];
 
 Tab.forEach((btn) => {
     btn.addEventListener("click", function() {
@@ -18,15 +18,15 @@ Tab.forEach((btn) => {
 function jeu(id) {
     let i = Math.floor(Math.random() * Tab.length),
         computer = Tab[i].id,
-        player = id;
+        user = id;
 
-    partie.textContent = "Utilisatuer a joué : " + player + "  //   Ordinateur a joué : " + computer;
+    partie.textContent = "Utilisatuer a joué : " + user + "  //   Ordinateur a joué : " + computer;
 
-    if ((player == "ciseaux" && computer == "feuille") ||
-        (player == "feuille" && computer == "pierre") ||
-        (player == "pierre" && computer == "ciseaux")) {
+    if ((user == "ciseaux" && computer == "feuille") ||
+        (user == "feuille" && computer == "pierre") ||
+        (user == "pierre" && computer == "ciseaux")) {
         result.textContent = "Gagné !";
-    } else if (computer == player) {
+    } else if (computer == user) {
         result.textContent = "Égalité !";
     } else {
         result.textContent = "Perdu !";

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- les consignes de l'exercice sont dans le fichiers JS 
+Vous pouvez aussi retrouver l'exercice en ligne sur le site repl.it : https://repl.it/@TerenceF/CryptoMarket
+-->
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>CryptoMarket</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	
+    <h1>Cours actuels des principales cryptomonnaies</h1>
+    <div class="container">
+      <!-- le tableau est formé grâce aux propriétés CSS -->
+      <!-- Vous êtes libre de rajouter des id ou des classes partout où ça peut vous être utile -->
+      <div class="table">
+        <div class="table-header">
+          <div class="header__item">Devise</div>
+          <div class="header__item">Prix</div>
+          <div class="header__item">Marketcap</div>
+          <div class="header__item">Volume(24h)</div>
+          <div class="header__item">Qté Disponible</div>
+          <div class="header__item">Variation(24h)</div>
+        </div>
+        <div class="table-content">	
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="bitcoin"><br>Bitcoin (BTC)</div>
+            <div class="table-data">10.290,10 €</div>
+            <div class="table-data">190,72 B€</div>
+            <div class="table-data">22,65 B€</div>
+            <div class="table-data">18,46 M</div>
+            <div class="table-data">+3.087%</div>
+          </div>
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png"alt="ethereum"><br>Ethereum (ETH)</div>
+            <div class="table-data">361,23 €</div>
+            <div class="table-data">40,74 B€</div>
+            <div class="table-data">10,87 B€</div>
+            <div class="table-data">112,23 M</div>
+            <div class="table-data">+2.047%</div>
+          </div>
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/44/small/xrp.png" alt="ripple"><br>Ripple (XRP)</div>
+            <div class="table-data">0,259599 €</div>
+            <div class="table-data">11,84 B€</div>
+            <div class="table-data">2,79 B€</div>
+            <div class="table-data">44,92 B</div>
+            <div class="table-data">-0.047%</div>
+          </div>
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/325/small/tether.png"alt="tether"><br>Tether (USDT)</div>
+            <div class="table-data">0,843639 €</div>
+            <div class="table-data">10,53 B€</div>
+            <div class="table-data">32,14 B€</div>
+            <div class="table-data">12,50 B</div>
+            <div class="table-data">+3.258%</div>
+          </div>
+
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png?1547034700"alt="link"><br>ChainLink (LINK)</div>
+            <div class="table-data">13.93 €</div>
+            <div class="table-data">5.354 B€</div>
+            <div class="table-data">1.996 B€</div>
+            <div class="table-data">383 M</div>
+            <div class="table-data">+3.258%</div>
+          </div>
+
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/780/small/bitcoin-cash-circle.png?1594689492"alt="bch"><br>Bitcoin Cash (BCH)</div>
+            <div class="table-data">250.3 €</div>
+            <div class="table-data">4.628 B€</div>
+            <div class="table-data">2.741 B€</div>
+            <div class="table-data">21 M</div>
+            <div class="table-data">+3.258%</div>
+          </div>
+
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/975/small/cardano.png"alt="tether"><br>Cardano (ADA)</div>
+            <div class="table-data">0.111919 €</div>
+            <div class="table-data">3.485 B€</div>
+            <div class="table-data">439 M€</div>
+            <div class="table-data">31.112 B</div>
+            <div class="table-data">+3.258%</div>
+          </div>
+
+          <div class="table-row">		
+            <div class="table-data"><img src="https://assets.coingecko.com/coins/images/2/small/litecoin.png"alt="tether"><br>Litecoin (LTC)</div>
+            <div class="table-data">53.26 €</div>
+            <div class="table-data">3.479 B€</div>
+            <div class="table-data">2.997 B€</div>
+            <div class="table-data">65.271 M</div>
+            <div class="table-data">+3.258%</div>
+          </div>
+
+        </div>	
+      </div>
+    </div>
+  </body>
+
+    <!-- on charge jquery et notre script en dernier pour accélérer l'affichage de la page (c'est une optimisation à ne pas négliger quand c'est possible)-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</html>

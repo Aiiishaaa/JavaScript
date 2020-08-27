@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let newBtn = document.createElement("button");
+        newBtn.id = 'btn';
+        newBtn.innerHTML = 'Tester';
+        newBtn.style.width = '100px';
+        document.body.appendChild(newBtn);
+        newBtn.OnClick = 'test1()';
+        let btn = document.getElementById('#btn'),
+            str = document.createElement('p');
+        document.body.appendChild(str);
+
+        let p = document.createElement('p');
+        document.body.appendChild(p);
+        const tab = ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D'];
+
+
+        function test1(texte) {
+
+            for (let i = 0; i < tab.length; i++) {
+                if ((texte[0] == tab[i])) {
+                    p.textContent = texte + "  est une chaine de caractére valide commençant par un " + tab[i];
+                    console.log(texte);
+                }
+            }
+        }
+        test1("Aicha")
+    </script>
+</body>
+
+</html>
