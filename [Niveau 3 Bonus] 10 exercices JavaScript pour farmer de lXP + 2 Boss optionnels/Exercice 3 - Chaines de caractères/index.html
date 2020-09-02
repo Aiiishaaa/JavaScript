@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #btn {
+        button {
             margin: 20px;
         }
     </style>
@@ -14,30 +14,130 @@
 
 <body>
     <script>
-        let newBtn = document.createElement("button");
-        newBtn.id = 'btn';
-        newBtn.innerHTML = 'Tester';
-        newBtn.style.width = '100px';
-        document.body.appendChild(newBtn);
-        newBtn.OnClick = 'test1()';
-        let btn = document.getElementById('#btn'),
-            str = document.createElement('p');
-        document.body.appendChild(str);
-
-        let p = document.createElement('p');
-        document.body.appendChild(p);
-        const tab = ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D'];
-
+        /* Tester si une chaîne de caractère passée en paramètre commence par une lettre majuscule ou minuscule positionnée entre 'a' et 'd'.*/
+        let newBtn1 = document.createElement("button");
+        newBtn1.id = 'btn1';
+        newBtn1.innerHTML = 'Tester';
+        newBtn1.style.width = '100px';
+        newBtn1.style.height = '20px';
+        document.body.appendChild(newBtn1);
+        newBtn1.addEventListener("Click", function() {
+            test1("Bonjour")
+        })
 
         function test1(texte) {
+
+            const tab = ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D'];
+            let p1 = document.createElement('p');
+            document.body.appendChild(p1);
+            let p1x = document.createElement('p');
+            document.body.appendChild(p1x);
+
+            body = newBtn1.parentNode;
+            body.insertBefore(p1x, newBtn1);
+            p1x.textContent = texte;
+
             for (let i = 0; i < tab.length; i++) {
                 if ((texte[0] == tab[i])) {
-                    p.textContent = texte + "  est une chaine de caractére valide commençant par un " + tab[i];
-                    console.log(texte);
+                    p1.textContent = texte + "  est une chaine de caractére valide commençant par un " + tab[i];
                 }
             }
         }
-        test1("Aicha")
+
+        /** Ecrire une fonction qui renvoie true lorsqu'une chaîne contient un seul caractère '@' sinon renvoie false.*/
+
+
+        let newBtn2 = document.createElement("button");
+        newBtn2.id = 'btn2';
+        newBtn2.innerHTML = 'Tester';
+        newBtn2.style.width = '100px';
+        newBtn2.style.height = '20px';
+        document.body.appendChild(newBtn2);
+        newBtn2.OnClick = 'test2()';
+
+        p2 = document.createElement('p');
+        document.body.appendChild(p2);
+        p2x = document.createElement('p');
+        document.body.appendChild(p2x);
+
+        body = newBtn2.parentNode;
+        body.insertBefore(p2x, newBtn2);
+
+        function test2(texte2) {
+            p2x.textContent = texte2;
+            for (let i = 0; i < texte2.length; i++) {
+                if (texte2[i] == "@") {
+                    p2.textContent = texte2 + "chaine invalide qui contient @ ";
+                } else {
+                    p2.textContent = texte2 + "Chaine valide";
+                }
+            }
+
+        }
+        test2("monadresse@xelib.@com")
+
+        /** Ecrire une fonction qui renvoie true lorsqu'une chaîne contient au moins un chiffre sinon renvoie false.*/
+
+
+        let newBtn3 = document.createElement("button");
+        newBtn3.id = 'btn3';
+        newBtn3.innerHTML = 'Tester';
+        newBtn3.style.width = '100px';
+        newBtn3.style.height = '20px';
+        document.body.appendChild(newBtn2);
+        newBtn3.OnClick = 'test3()';
+
+
+        p3 = document.createElement('p');
+        document.body.appendChild(p3);
+        p3x = document.createElement('p');
+        document.body.appendChild(p3x);
+
+
+        body = newBtn3.parentNode;
+        body.insertBefore(p3x, newBtn3);
+
+        function test3(texte3) {
+            p3x.textContent = texte3;
+            for (let i = 0; i < texte3.length; i++) {
+                if (!(chaine3[i].isNaN)) {
+                    p3.textContent = texte3 + "  est une chaine valide:contient un nombre ";
+                } else {
+                    p3.textContent = texte3 + "  est une chaine:ne contient pas un nombre ";
+                }
+            }
+            test3("12test")
+
+
+        }
+        /**Ecrire une fonction qui remplace les chiffres par le caractère '*' */
+
+
+        let newBtn4 = document.createElement("button");
+        newBtn4.id = 'btn4';
+        newBtn4.innerHTML = 'Tester';
+        newBtn4.style.width = '100px';
+        newBtn4.style.height = '20px';
+        document.body.appendChild(newBtn4);
+        newBtn4.OnClick = 'test4()';
+
+        p4 = document.createElement('p');
+        document.body.appendChild(p4);
+        p4x = document.createElement('p');
+        document.body.appendChild(p4x);
+
+        body = newBtn4.parentNode;
+        body.insertBefore(p4x, newBtn4);
+
+        function test4(texte4) {
+            p4x.textContent = texte4;
+            for (let i = 0; i < texte4.length; i++) {
+                if (!(texte4[i]).isNaN) {
+                    texte4[i] = "*";
+                }
+            }
+            test4("bon7jour8812")
+        }
     </script>
 </body>
 
