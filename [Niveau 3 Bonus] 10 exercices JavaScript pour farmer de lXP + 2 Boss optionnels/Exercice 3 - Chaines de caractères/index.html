@@ -21,20 +21,20 @@
         newBtn1.style.width = '100px';
         newBtn1.style.height = '20px';
         document.body.appendChild(newBtn1);
-        newBtn1.addEventListener("Click", function() {
-            test1("Bonjour")
+
+        newBtn1.addEventListener("click", function() {
+            test1("Bonjour");
         })
+        const tab = ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D'];
+        let p1 = document.createElement('p');
+        document.body.appendChild(p1);
+        let p1x = document.createElement('p');
+        document.body.appendChild(p1x);
+
+        body = newBtn1.parentNode;
+        body.insertBefore(p1x, newBtn1);
 
         function test1(texte) {
-
-            const tab = ['a', 'b', 'c', 'd', 'A', 'B', 'C', 'D'];
-            let p1 = document.createElement('p');
-            document.body.appendChild(p1);
-            let p1x = document.createElement('p');
-            document.body.appendChild(p1x);
-
-            body = newBtn1.parentNode;
-            body.insertBefore(p1x, newBtn1);
             p1x.textContent = texte;
 
             for (let i = 0; i < tab.length; i++) {
@@ -43,9 +43,7 @@
                 }
             }
         }
-
         /** Ecrire une fonction qui renvoie true lorsqu'une chaîne contient un seul caractère '@' sinon renvoie false.*/
-
 
         let newBtn2 = document.createElement("button");
         newBtn2.id = 'btn2';
@@ -53,11 +51,14 @@
         newBtn2.style.width = '100px';
         newBtn2.style.height = '20px';
         document.body.appendChild(newBtn2);
-        newBtn2.OnClick = 'test2()';
 
-        p2 = document.createElement('p');
+        newBtn2.addEventListener("click", function() {
+            test2("monadress@exe@lib.com")
+        })
+
+        let p2 = document.createElement('p');
         document.body.appendChild(p2);
-        p2x = document.createElement('p');
+        let p2x = document.createElement('p');
         document.body.appendChild(p2x);
 
         body = newBtn2.parentNode;
@@ -74,25 +75,24 @@
             }
 
         }
-        test2("monadresse@xelib.@com")
 
         /** Ecrire une fonction qui renvoie true lorsqu'une chaîne contient au moins un chiffre sinon renvoie false.*/
-
 
         let newBtn3 = document.createElement("button");
         newBtn3.id = 'btn3';
         newBtn3.innerHTML = 'Tester';
         newBtn3.style.width = '100px';
         newBtn3.style.height = '20px';
-        document.body.appendChild(newBtn2);
-        newBtn3.OnClick = 'test3()';
+        document.body.appendChild(newBtn3);
 
+        newBtn3.addEventListener("click", function() {
+            test3("12test")
+        })
 
         p3 = document.createElement('p');
         document.body.appendChild(p3);
         p3x = document.createElement('p');
         document.body.appendChild(p3x);
-
 
         body = newBtn3.parentNode;
         body.insertBefore(p3x, newBtn3);
@@ -100,13 +100,13 @@
         function test3(texte3) {
             p3x.textContent = texte3;
             for (let i = 0; i < texte3.length; i++) {
-                if (!(chaine3[i].isNaN)) {
+                if (!(texte3[i].isNaN)) {
                     p3.textContent = texte3 + "  est une chaine valide:contient un nombre ";
                 } else {
                     p3.textContent = texte3 + "  est une chaine:ne contient pas un nombre ";
                 }
             }
-            test3("12test")
+
 
 
         }
@@ -119,7 +119,9 @@
         newBtn4.style.width = '100px';
         newBtn4.style.height = '20px';
         document.body.appendChild(newBtn4);
-        newBtn4.OnClick = 'test4()';
+        newBtn4.addEventListener("click", function() {
+            test4("bon7jour8812");
+        })
 
         p4 = document.createElement('p');
         document.body.appendChild(p4);
@@ -128,15 +130,19 @@
 
         body = newBtn4.parentNode;
         body.insertBefore(p4x, newBtn4);
+        var str = "";
 
         function test4(texte4) {
             p4x.textContent = texte4;
             for (let i = 0; i < texte4.length; i++) {
-                if (!(texte4[i]).isNaN) {
-                    texte4[i] = "*";
+                if (!(isNaN(texte4[i]))) {
+                    str = str + "*";
+                    console.log(str);
+                } else {
+                    str = str + texte4[i];
                 }
             }
-            test4("bon7jour8812")
+            p4.textContent = str;
         }
     </script>
 </body>
