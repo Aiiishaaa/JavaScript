@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tester âge </title>
+
+</head>
+
+<body>
+
+    <script>
+        function saisieNombre() {
+            let n
+            while ((!(/^[0-9]*$/.test(n)) || n < 0)) {
+                n = prompt(" Saisissez votre âge Svp : ");
+            }
+            n = parseInt(n, 10);
+            return n;
+        }
+
+        let age = saisieNombre();
+
+        if (age < 18) {
+            alert("Vous n'avez pas le droit de venir sur ce site");
+        } else if (age >= 18 && age <= 50) {
+            alert("Vous êtes majeur mais pas encore senior, la vie est belle");
+        } else if (age > 50 && age <= 60) {
+            alert("Vous êtes senior mais pas encore retraité");
+        } else {
+            alert("Vous êtes retraité, profitez de votre temps libre !");
+        }
+    </script>
+</body>
+
+</html>

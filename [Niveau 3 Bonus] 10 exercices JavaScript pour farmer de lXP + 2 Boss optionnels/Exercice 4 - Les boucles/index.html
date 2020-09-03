@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les boucles </title>
+    <style>
+        textarea {
+            color: rgb(35, 89, 189);
+            font-size: 20px;
+            text-align: center;
+            margin: 10px;
+            width: 350px;
+            height: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+        }
+        
+        div {
+            padding-left: 80px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        function saisieNombre() {
+            let n
+            while (!(/^[0-9]+$/.test(n))) {
+                n = prompt(" Taper un nombre : ");
+            }
+            n = parseInt(n, 10);
+            return n;
+        }
+
+        let x = saisieNombre();
+
+        for (let i = 1; i <= x; i++) {
+
+            document.write("<TEXTAREA> Table de multiplication de " + i + "</TEXTAREA>");
+
+            for (let j = 1; j <= 10; j++) {
+                let div1 = document.createElement('div');
+                document.body.appendChild(div1);
+                div1.textContent = i + " x " + j + " = " + i * j;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
