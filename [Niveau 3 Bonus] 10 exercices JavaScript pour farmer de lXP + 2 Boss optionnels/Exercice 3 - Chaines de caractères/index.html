@@ -110,7 +110,7 @@
 
 
         }
-        /**Ecrire une fonction qui remplace les chiffres par le caractère '*' */
+        /* Ecrire une fonction qui remplace les chiffres par le caractère '*' */
 
 
         let newBtn4 = document.createElement("button");
@@ -143,6 +143,37 @@
                 }
             }
             p4.textContent = str;
+        }
+        /*  Vérifier une adresse mail donnée */
+
+        let newBtn5 = document.createElement("button");
+        newBtn5.id = 'btn5';
+        newBtn5.innerHTML = 'Tester';
+        newBtn5.style.width = '100px';
+        newBtn5.style.height = '20px';
+        document.body.appendChild(newBtn5);
+        newBtn5.addEventListener("click", function() {
+            test5("aicha.hamida06@yahoo.fr");
+
+        })
+
+        p5 = document.createElement('p');
+        document.body.appendChild(p5);
+        p5x = document.createElement('p');
+        document.body.appendChild(p5x);
+
+        body = newBtn5.parentNode;
+        body.insertBefore(p5x, newBtn5);
+
+        function test5(texte5) {
+            p5x.textContent = texte5;
+            let expressionReguliere = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+
+            if (expressionReguliere.test(texte5)) {
+                p5.textContent = texte5 + " est une adresse mail valide"
+            } else {
+                p5.textContent = texte5 + " est une adresse mail non valide"
+            }
         }
     </script>
 </body>
