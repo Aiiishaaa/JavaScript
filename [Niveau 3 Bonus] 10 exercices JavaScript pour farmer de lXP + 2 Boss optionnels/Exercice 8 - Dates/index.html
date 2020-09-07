@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dates </title>
+    <style>
+        div {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            font-size: 30px;
+            text-align: justify;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const today = new Date(Date.now());
+        console.log(today);
+
+        const birthday = new Date("January 09, 2021");
+        console.log(birthday);
+
+        let nb_days = Math.round((birthday - today) / (1000 * 60 * 60 * 24));
+        console.log(nb_days);
+
+        document.write("<div> Nous somme le " + today + ".</div>")
+        document.write("<div> Votre anniversaire aura lieu le " + birthday + ". </div>")
+        document.write("<div> Il reste " + nb_days + " jours avant la date de votre anniversaire. </div>")
+    </script>
+</body>
+
+</html>

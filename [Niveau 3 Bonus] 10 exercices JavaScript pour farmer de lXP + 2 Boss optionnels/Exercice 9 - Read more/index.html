@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More</title>
+</head>
+
+<body>
+    <div class="textecourt">
+        <p>Lorem ipsum ...</p>
+        <button onclick="show()"> Lire plus </button>
+    </div>
+
+    <p class="texte" style="display: none;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum velit, nihil a adipisci doloribus cumque vero unde minus placeat cum repellendus beatae voluptatibus est dolores? Error dignissimos nisi natus consectetur!
+    </p>
+
+    <script>
+        const textecourt = document.querySelector(".textecourt");
+        const texte = document.querySelector(".texte");
+
+        function show() {
+            textecourt.style.display = "none";
+            texte.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

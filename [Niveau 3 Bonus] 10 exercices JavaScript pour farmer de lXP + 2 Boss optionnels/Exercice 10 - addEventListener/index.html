@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Modifier la structure DOM avec addEventListener </title>
+</head>
+
+<body>
+    <button value="bouton"> Cliquez-moi </button>
+    <script>
+        const change = [" Cliquez-moi ", " Vous m'avez cliqué "];
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", () => {
+            if (btn.textContent == change[0]) {
+                btn.textContent = change[1];
+            } else {
+                btn.textContent = change[0];
+            }
+        })
+    </script>
+</body>
+
+</html>
