@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrice</title>
+    <style>
+        .form {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .carre {
+            border: 5px solid rgb(55, 224, 168);
+        }
+        
+        .rond {
+            border: 5px solid rgb(55, 224, 168);
+            border-radius: 50%;
+        }
+        
+        .losange {
+            border: 5px solid rgb(55, 224, 168);
+            transform: rotateZ(45deg);
+        }
+        
+        table {
+            width: 800px;
+            height: 800px;
+            margin: auto;
+            border-spacing: 30px 30px;
+        }
+        
+        button {
+            margin-left: 600px;
+            width: 200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+            background-color: rgb(214, 98, 133);
+        }
+        
+        .remplir {
+            background-color: rgb(92, 221, 98);
+        }
+        
+        .vider {
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td class="form carre"></td>
+            <td class="form rond"></td>
+            <td class="form rond"></td>
+            <td class="rond form "></td>
+            <td class="rond form "></td>
+        </tr>
+        <tr>
+            <td class="rond form "></td>
+            <td class="carre form "></td>
+            <td class="rond form "></td>
+            <td class="rond form "></td>
+            <td class="rond form "></td>
+        </tr>
+        <tr>
+            <td class=" rond form "></td>
+            <td class=" rond form  "></td>
+            <td class="losange form "></td>
+            <td class=" rond form  "></td>
+            <td class=" rond form  "></td>
+        </tr>
+        <tr>
+            <td class="rond form "></td>
+            <td class="rond form "></td>
+            <td class="rond form  "></td>
+            <td class="carre form "></td>
+            <td class="rond form "></td>
+        </tr>
+        <tr>
+            <td class="rond form "></td>
+            <td class="rond form "></td>
+            <td class="rond form "></td>
+            <td class="rond form "></td>
+            <td class="carre form "></td>
+        </tr>
+    </table>
+    <div class="btn">
+        <button id="remplir">Remplir</button>
+        <button id="vider">Vider</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $('#remplir').click(function() {
+            $('.form').addClass('remplir');
+            $('.form').removeClass('vider');
+
+        });
+
+        $('#vider').click(function() {
+            $('.form').addClass('white');
+            $('.form').removeClass('remplir')
+        })
+
+        $('.rond').click(function() {
+            $(this).toggleClass('remplir')
+        });
+
+        $('.carre').click(function() {
+            if ($(this).hasClass('remplir')) {
+                $(".form").toggleClass('remplir');
+            }
+        })
+        $('.losange').click(function() {
+            $(this).toggleClass('remplir')
+            $('.form :nth-child(3)').toggleClass('remplir');
+            $(' .form :nth-child(3)').toggleClass('remplir');
+        })
+    </script>
+</body>
+
+</html>
