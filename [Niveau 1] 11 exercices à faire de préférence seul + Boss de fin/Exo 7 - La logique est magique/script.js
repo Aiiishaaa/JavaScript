@@ -16,6 +16,7 @@ if (epee || bouclier) { //Ecrivez entre les parenthèses les tests correspondant
     console.log("echec, vous perdez votre epée");
     epee = false;
 }
+
 //Deuxième boss
 console.log("Deuxième boss : Le magicien ANDNOT")
     //si votre personnage possède un bouclier et qu'il n'a pas de casque, il arrive à vaincre ce boss
