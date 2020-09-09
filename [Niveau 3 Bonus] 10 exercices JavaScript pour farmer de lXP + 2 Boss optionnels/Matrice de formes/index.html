@@ -97,14 +97,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>
         $('#remplir').click(function() {
-            $('.form').addClass('remplir');
-            $('.form').removeClass('vider');
+            $('td').addClass('remplir');
+            $('td').removeClass('vider');
 
         });
 
         $('#vider').click(function() {
-            $('.form').addClass('white');
-            $('.form').removeClass('remplir')
+            $('td').addClass('white');
+            $('td').removeClass('remplir')
         })
 
         $('.rond').click(function() {
@@ -112,14 +112,15 @@
         });
 
         $('.carre').click(function() {
+            $(this).toggleClass('remplir')
             if ($(this).hasClass('remplir')) {
-                $(".form").toggleClass('remplir');
+                $("").toggleClass('remplir');
             }
         })
         $('.losange').click(function() {
             $(this).toggleClass('remplir')
-            $('.form :nth-child(3)').toggleClass('remplir');
-            $(' .form :nth-child(3)').toggleClass('remplir');
+            $('tr:nth-child(3)').toggleClass('remplir');
+            $('td:nth-child(3)').toggleClass('remplir');
         })
     </script>
 </body>
