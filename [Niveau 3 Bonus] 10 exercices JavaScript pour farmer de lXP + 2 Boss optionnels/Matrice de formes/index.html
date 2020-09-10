@@ -22,14 +22,14 @@
         
         .losange {
             border: 5px solid rgb(55, 224, 168);
-            transform: rotate(45deg);
+            transform: rotate(45deg) scale(0.8);
         }
         
         table {
-            width: 800px;
-            height: 800px;
-            margin: auto;
-            border-spacing: 30px 30px;
+            width: 900px;
+            height: 900px;
+            margin-left: 650px;
+            border-spacing: 30px;
         }
         
         button {
@@ -57,14 +57,14 @@
         <tr>
             <td class="form carre"></td>
             <td class="form rond"></td>
-            <td class="form rond"></td>
+            <td class="form test rond"></td>
             <td class="rond form "></td>
             <td class="rond form "></td>
         </tr>
         <tr>
             <td class="rond form "></td>
             <td class="carre form "></td>
-            <td class="rond form "></td>
+            <td class="rond test form "></td>
             <td class="rond form "></td>
             <td class="rond form "></td>
         </tr>
@@ -78,14 +78,14 @@
         <tr>
             <td class="rond form "></td>
             <td class="rond form "></td>
-            <td class="rond form  "></td>
+            <td class="rond test form  "></td>
             <td class="carre form "></td>
             <td class="rond form "></td>
         </tr>
         <tr>
             <td class="rond form "></td>
             <td class="rond form "></td>
-            <td class="rond form "></td>
+            <td class="rond test form "></td>
             <td class="rond form "></td>
             <td class="carre form "></td>
         </tr>
@@ -111,16 +111,17 @@
             $(this).toggleClass('remplir');
         });
 
+
         $('.carre').click(function() {
             $(this).toggleClass('remplir');
-            if ($(this).hasClass('remplir')) {
-                $("").toggleClass('remplir');
-            }
-        })
+            $(this).siblings().toggleClass('remplir');
+        });
+
+
         $('.losange').click(function() {
-            $(this).toggleClass('remplir');
-            $('tr:nth-child(3)').toggleClass('remplir');
-            $('td:nth-child(3)').toggleClass('remplir');
+            let col = $('tr>td:nth-child(3)');
+            $(this).siblings().toggleClass('remplir');
+            $(col).toggleClass('remplir');
         })
     </script>
 </body>
