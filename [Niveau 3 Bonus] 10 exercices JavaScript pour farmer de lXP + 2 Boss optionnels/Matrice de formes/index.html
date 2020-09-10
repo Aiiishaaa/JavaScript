@@ -22,7 +22,7 @@
         
         .losange {
             border: 5px solid rgb(55, 224, 168);
-            transform: rotateZ(45deg);
+            transform: rotate(45deg);
         }
         
         table {
@@ -108,17 +108,17 @@
         })
 
         $('.rond').click(function() {
-            $(this).toggleClass('remplir')
+            $(this).toggleClass('remplir');
         });
 
         $('.carre').click(function() {
-            $(this).toggleClass('remplir')
+            $(this).toggleClass('remplir');
             if ($(this).hasClass('remplir')) {
                 $("").toggleClass('remplir');
             }
         })
         $('.losange').click(function() {
-            $(this).toggleClass('remplir')
+            $(this).toggleClass('remplir');
             $('tr:nth-child(3)').toggleClass('remplir');
             $('td:nth-child(3)').toggleClass('remplir');
         })

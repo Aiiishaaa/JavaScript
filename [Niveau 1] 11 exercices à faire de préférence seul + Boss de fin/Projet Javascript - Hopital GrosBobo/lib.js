@@ -18,7 +18,7 @@ function deleteAllP(pNumber) {
 }
 
 function hideColor(pNumber) {
-    let clrs = document.getElementsByTagName("bouton");
+    let clrs = document.getElementsByTagName("button");
     for (var i = 0; i < clrs.length; i++) {
         clrs.item(i).style.background = "rgba(0, 0, 0, .5)";
     }
